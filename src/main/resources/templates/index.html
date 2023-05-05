@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photography App</title>
+</head>
+<body>
+    <h1>Photos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="photo : ${photos}">
+                <td th:text="${photo.title}"></td>
+                <td th:text="${photo.description}"></td>
+                <td><img th:src="${photo.imageUrl}" /></td>
